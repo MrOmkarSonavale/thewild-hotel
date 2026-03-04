@@ -14,6 +14,7 @@ const NavList = styled.ul`
   gap: 0.8rem;
 `;
 
+//not understand
 const StyledNavLink = styled(NavLink)`
   &:link,
   &:visited {

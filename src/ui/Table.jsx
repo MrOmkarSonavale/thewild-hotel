@@ -57,3 +57,5 @@ const Empty = styled.p`
   text-align: center;
   margin: 2.4rem;
 `;
+
+console.log(StyledTable, CommonRow, StyledHeader, Empty, Footer, StyledRow, StyledBody)
