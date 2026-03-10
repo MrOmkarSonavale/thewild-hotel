@@ -1,31 +1,20 @@
-// eslint-disable-next-line no-unused-vars
-import { useEffect } from "react";
+import CabinTable from "../features/cabins/CabinTable";
 import Heading from "../ui/Heading";
 import Row from "../ui/Row";
-// eslint-disable-next-line no-unused-vars
-import { getCabins } from "../services/apiCabins";
-import CabinTable from "../features/cabins/CabinTable";
-import { useState } from "react";
-import CreateCabinForm from "../features/cabins/CreateCabinForm";
-import Button from "../ui/Button";
+import AddCabin from "../features/cabins/AddCabin";
+import CabinTableOperations from "../features/cabins/CabinTableOperations";
 
 function Cabins() {
-  const [showForm, setShowForm] = useState(false);
-
   return (
     <>
       <Row type="horizontal">
         <Heading as="h1">All cabins</Heading>
+        <CabinTableOperations />
       </Row>
+
       <Row>
         <CabinTable />
-
-        <Button onClick={() => setShowForm(showForm => !showForm)}>Add New Cabin</Button>
-
-        {
-          showForm && <CreateCabinForm />
-        }
-
+        <AddCabin />
       </Row>
     </>
   );
